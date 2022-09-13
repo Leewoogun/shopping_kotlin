@@ -2,7 +2,7 @@ package screen
 
 class ShoppingCategory {
     public fun showCategories() {
-        val categories = arrayOf("패션, 전자기기, 반려동물용품")
+        val categories = arrayOf("패션", "전자기기", "반려동물용품")
 
         for (cate in categories) {
             println(cate)
@@ -20,16 +20,15 @@ class ShoppingCategory {
             // TODO 1. 장바구니 이동
         }
         else {
-            // TODO 2. 카테고리 상품 목록 보여주기
             if (categories.contains(selectedCate)){
+                val shoppingProductList = ShoppingProductList()
+                shoppingProductList.showProducts(selectedCate)
 
             }
             else {
                 showErrorMessage(selectedCate)
 
             }
-
-            // TODO 3. 카테고리 목록에 없는 값을 입력
         }
     }
 
